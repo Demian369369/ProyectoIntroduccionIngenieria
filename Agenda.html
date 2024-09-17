@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Tareas</title>
+    <link rel="stylesheet" href="css/Agenda.css">
+    <link rel="icon" type="image/svg+xml" href="images/Agujero.jpeg">
+
+</head>
+<body>
+    <div class="container">
+        <div class="calendar-container">
+            <input type="month" id="monthPicker" />
+            <div id="calendar"></div>
+        </div>
+        <div id="clock" class="clock"></div>
+
+        <div class="tasks-container">
+            <h2 id="selectedDate">Tareas para <span id="displayDate"></span></h2>
+            <ul id="taskList"></ul>
+
+            <div class="task-input">
+                <textarea id="newTask" placeholder="Agregar nueva tarea"></textarea>
+                <input type="time" id="taskTime" />
+                <button onclick="addTask()">Agregar Tarea</button>
+                <div class="important-things">
+                    <div class="add-form">
+                <button id="excel-button"onclick="window.location.href='Inicio.html';">Inicio</button>
+                <button id="excel-button"onclick="window.location.href='CosasImportantes.html';">Cosas Importantes</button>
+                <button id="excel-button"onclick="window.location.href='UDGMaterias.html';">UDG Materias</button>
+                <button id="excel-button"onclick="window.location.href='MapaUDG.html';">Mapa UDG</button>
+            </div>
+        </div>
+        <div id="taskPercentage">Completaste el <span id="completionPercentage">0%</span> de las tareas</div>
+    </div>
+
+    <script src="js/Agenda.js"></script>
+</body>
+</html>
+           
+
+

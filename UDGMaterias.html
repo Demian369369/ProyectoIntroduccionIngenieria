@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Materias UDG</title>
+    <link rel="icon" type="image/svg+xml" href="images/Agujero.jpeg">
+    <link rel="stylesheet" href="css/UDGMaterias.css">
+</head>
+<body>
+    <div class="top-buttons">
+        <button class="external-link-btn" onclick="window.location.href='Inicio.html'">Inicio</button>
+        <button class="external-link-btn" onclick="window.location.href='CosasImportantes.html'">Cosas Importantes</button>
+        <button class="external-link-btn" onclick="window.location.href='Agenda.html'">Agenda</button>
+        <button class="external-link-btn" onclick="window.location.href='MapaUDG.html'">Mapa Escuela</button>
+
+
+    </div>    
+    <div class="container">
+        <div class="menu">
+            <button class="main-btn" onclick="toggleMenu('subjectsMenu')">Tareas</button>
+            <div id="subjectsMenu" class="submenu">
+                <button class="sub-btn" onclick="toggleMenu('subject1Tasks')">Logica Matematica</button>
+                <div id="subject1Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskMa1')">Leer Teoria Conjuntos</button>
+                    <button class="task-btn" onclick="showTask('taskMa2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject2Tasks')">Fundamentos De Programacion</button>
+                <div id="subject2Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskPro1')">Unirme al Clasroom</button>
+                    <button class="task-btn" onclick="showTask('taskPro2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject3Tasks')">Introduccion Ingenieria</button>
+                <div id="subject3Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskIng1')">Nada</button>
+                    <button class="task-btn" onclick="showTask('taskIng2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject4Tasks')">Etica Y Legislacion</button>
+                <div id="subject4Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskEL1')">Leer Documento word</button>
+                    <button class="task-btn" onclick="showTask('taskEL2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject5Tasks')">Precalculo</button>
+                <div id="subject5Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskPre1')">Nada</button>
+                    <button class="task-btn" onclick="showTask('taskPre2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject6Tasks')">Fundamentos De Fisica</button>
+                <div id="subject6Tasks" class="submenu">
+                    <button class="task-btn" onclick="showTask('taskFi1')">Parabolas y Caida Libre</button>
+                    <button class="task-btn" onclick="showTask('taskFi2')">Angulos</button>
+                </div>
+            </div>
+            <button class="main-btn" onclick="toggleMenu('worksMenu')">Trabajos</button>
+            <div id="worksMenu" class="submenu">
+                <button class="sub-btn" onclick="toggleMenu('subject1Works')">Logica Matematica</button>
+                <div id="subject1Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workMa1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workMa2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject2Works')">Fundamentos De Programacion</button>
+                <div id="subject2Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workPro1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workPro2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject3Works')">Introduccion Ingenieria</button>
+                <div id="subject3Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workIng1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workIng2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject4Works')">Etica Y Legislacion</button>
+                <div id="subject4Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workEL1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workEL2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject5Works')">Precalculo</button>
+                <div id="subject5Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workPre1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workPre2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject6Works')">Fundamentos De Fisica</button>
+                <div id="subject6Works" class="submenu">
+                    <button class="work-btn" onclick="showWork('workFi1')">Nada</button>
+                    <button class="work-btn" onclick="showWork('workFi2')">Nada</button>
+                </div>
+            </div>
+
+            <button class="main-btn" onclick="toggleMenu('resourcesMenu')">Recursos</button>
+            <div id="resourcesMenu" class="submenu">
+                <button class="sub-btn" onclick="toggleMenu('subject1Resources')">Logica Matematica</button>
+                <div id="subject1Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourceMa1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourceMa2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject2Resources')">Fundamentos De Programacion</button>
+                <div id="subject2Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourcePro1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourcePro2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject3Resources')">Introduccion Ingenieria</button>
+                <div id="subject3Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourceIng1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourceIng2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject4Resources')">Etica Y Legislacion</button>
+                <div id="subject4Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourceEL1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourceEL2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject5Resources')">Precalculo</button>
+                <div id="subject5Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourcePre1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourcePre2')">Nada</button>
+                </div>
+                <button class="sub-btn" onclick="toggleMenu('subject6Resources')">Fundamentos De Fisica</button>
+                <div id="subject6Resources" class="submenu">
+                    <button class="resource-btn" onclick="showResource('resourceFi1')">Nada</button>
+                    <button class="resource-btn" onclick="showResource('resourceFi2')">Nada</button>
+                </div>
+            </div>
+            
+        </div>
+        <div id="details" class="details">
+            <h2>Detalles</h2>
+            <p id="description"></p>
+        </div>
+    </div>
+    <script src="js/UDGMaterias.js"></script>
+</body>
+</html>

@@ -7,9 +7,10 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiado a flex-start para evitar que se solapen en móviles */
     min-height: 100vh;
     overflow-x: hidden;
+    flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias líneas */
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
+    margin-top: 10px; /* Añadido margen superior */
 }
 
 .phone-screen {
@@ -76,8 +78,8 @@ body {
 }
 
 .right-panel {
-    position: absolute;
-    right: 20px;
+    position: relative; /* Cambiado a relative para que se adapte mejor en móviles */
+    right: -20px;
     top: 20px;
     width: 220px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -86,6 +88,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px;
     text-align: center;
+    margin-top: 10px; /* Añadido margen superior */
 }
 
 .right-panel h2 {
@@ -116,7 +119,7 @@ body {
 }
 
 .important-things {
-    position: absolute; /* Cambiado de fixed a absolute para que esté dentro del contenedor */
+    position: relative; /* Cambiado a relative para que se adapte mejor en móviles */
     top: 20px;
     left: 20px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -124,6 +127,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
+    margin-right: 20px; /* Añadido margen a la derecha */
 }
 
 .add-form button {
@@ -144,9 +148,24 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Cambiado a columna en móviles */
+        align-items: center; /* Centra los elementos en móviles */
+    }
+
     .container {
-        width: 90%;
-        height: auto;
-        max-height: 90vh;
+        width: 90%; /* Hace que el contenedor ocupe el 90% del ancho */
+        height: auto; /* Ajusta la altura automáticamente */
+        max-height: 90vh; /* Limita la altura máxima */
+    }
+
+    .right-panel {
+        width: 90%; /* Hace que el panel derecho ocupe el 90% en móviles */
+        margin-top: 20px; /* Añade espacio entre el contenedor y el panel derecho */
+    }
+
+    .important-things {
+        width: 90%; /* Hace que "important things" ocupe el 90% en móviles */
+        margin-top: 20px; /* Añade espacio entre el contenedor y "important things" */
     }
 }

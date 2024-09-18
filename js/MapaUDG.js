@@ -1,5 +1,6 @@
 let showingParts = false;
 let showingInteractiveMap = false;
+let showingZonesOfInterest = false; 
 
 function showParts() {
     const partsButtons = document.getElementById('parts-buttons');
@@ -14,10 +15,22 @@ function showParts() {
     }
     showingParts = !showingParts; 
 }
+function showZonesOfInterest() {
+    const zonesButtons = document.getElementById('zones-buttons');
+    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(2))'); // Asumiendo que el nuevo botón es el quinto
 
+    if (showingZonesOfInterest) {
+        zonesButtons.style.display = 'none';
+        otherButtons.forEach(button => button.style.display = 'block');
+    } else {
+        zonesButtons.style.display = 'block';
+        otherButtons.forEach(button => button.style.display = 'none');
+    }
+    showingZonesOfInterest = !showingZonesOfInterest; 
+}
 function showInteractiveMap() {
     const interactiveMapButtons = document.getElementById('interactive-map-buttons');
-    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(2))');
+    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(3))');
     
     if (showingInteractiveMap) {
         interactiveMapButtons.style.display = 'none';
@@ -60,5 +73,6 @@ function showMainMap() {
     document.getElementById('interactive-map-buttons').style.display = 'none';
     document.getElementById('doors-buttons').style.display = 'none';
 }
+
 
 

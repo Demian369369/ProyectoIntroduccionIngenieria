@@ -31,23 +31,42 @@
         <h2>Filtro de Mapa UDG</h2>
         <div class="buttons-container">
             <button onclick="showParts()">Buscar Zona en Especifico</button>
-            <button onclick="showInteractiveMap()">Mapa Interactivo</button> <!-- Cambié a showInteractiveMap -->
+            <button onclick="showZonesOfInterest()">Zonas de Interés</button> 
+            <button onclick="showInteractiveMap()">Mapa Interactivo</button> 
             <button onclick="showGoogleMaps()">Abrir en Google Maps</button>
             <button onclick="window.location.href='https://1drv.ms/p/c/8daf5964e63d40e0/Ef14SDxuiHhMithnYRkfLqEBrDBcbGrKqtKSGPDPGVXlzQ?e=g2w96K';">Conociendo Mi UDG</button>
+            <button onclick="changeMap('images/ingesmap.jpg')"">Mapa Ingenierias</button>
+
         </div>
         
-        <!-- Zona para Buscar Zona en Específico -->
         <div class="parts-buttons" id="parts-buttons" style="display: none;">
-            <button class="btn-brillante" onclick="changeMap('entradas.jpg')">Entradas</button>
-            <button class="btn-brillante" onclick="changeMap('cordinacion.jpg')">Cordinacion</button>
-            <button class="btn-brillante" onclick="changeMap('edificiox.jpg')">Edificio (X)</button>
-            <button class="btn-brillante" onclick="changeMap('edificioalfabeta.jpg')">Edificios Alfa, Beta</button>
-            <button class="btn-brillante" onclick="changeMap('edificion.jpg')">Edificio (N)</button>
-            <button class="btn-brillante" onclick="changeMap('edificiout.jpg')">Edificios (U), (T)</button>
-            <button class="btn-brillante" onclick="changeMap('cafeteria.jpg')">Cafeterias</button>
+            <button class="btn-brillante" onclick="changeMap('images/entradas.jpg')">Entradas</button>
+            <button class="btn-brillante" onclick="changeMap('images/cordinacion.jpg')">Cordinacion</button>
+            <button class="btn-brillante" onclick="changeMap('images/edificiox.jpg')">Edificio (X)</button>
+            <button class="btn-brillante" onclick="changeMap('images/edificioalfabeta.jpg')">Edificios Alfa, Beta</button>
+            <button class="btn-brillante" onclick="changeMap('images/edificion.jpg')">Edificio (N)</button>
+            <button class="btn-brillante" onclick="changeMap('images/edificiout.jpg')">Edificios (U), (T)</button>
+            <button class="btn-brillante" onclick="changeMap('images/cafeteria.jpg')">Cafeterias</button>
         </div>
 
-        <!-- Zona para Mapa Interactivo -->
+        <div class="zones-buttons" id="zones-buttons" style="display: none;">
+            <button class="btn-brillante" onclick="changeMap('images/sanitarios.jpg')">Sanitarios</button>
+            <button class="btn-brillante" onclick="changeMap('images/papelerias.jpg')">Papelerias</button>
+            <button class="btn-brillante" onclick="changeMap('images/lonaria.jpg')">Lonaria</button>
+            <button class="btn-brillante" onclick="changeMap('images/controlescolar.jpg')">Control Escolar</button>
+            <button class="btn-brillante" onclick="changeMap('images/jobsproulex.jpg')">Jobs & Proulex</button>
+            <button class="btn-brillante" onclick="changeMap('images/auditorios.jpg')">Auditorios</button>
+            <button class="btn-brillante" onclick="changeMap('images/medicos.jpg')">Servicios Medicos</button>
+            <button class="btn-brillante" onclick="changeMap('images/generales.jpg')">Servicios Generales</button>
+            <button class="btn-brillante" onclick="changeMap('images/cajero.jpg')">Cajero</button>
+
+
+
+
+
+
+        </div>
+
         <div class="doors-buttons" id="interactive-map-buttons" style="display: none;">
             <button class="btn-brillante" onclick="changeMap('puerta1.jpg')">Boulevard</button>
             <button class="btn-brillante" onclick="changeMap('puerta2.jpg')">Proximamente</button>

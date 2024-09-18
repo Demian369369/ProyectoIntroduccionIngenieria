@@ -23,7 +23,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
-    margin-top: 10px; /* Añadido margen superior */
 }
 
 .phone-screen {
@@ -119,14 +118,11 @@ body {
 
 .important-things {
     position: relative; /* Cambiado a relative para que se adapte mejor en móviles */
-    top: 20px;
-    left: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    margin-right: 20px; /* Añadido margen a la derecha */
 }
 
 .add-form button {

@@ -44,10 +44,15 @@ body {
 }
 
 .map-container {
-    margin: 20px 0;
-    border: 1px solid #CCC; /* Corregido el valor del borde */
-    border-radius: 10px;
+    width: 100%; 
+    height: 100%; /* Cambiado para ocupar toda la altura disponible */
     overflow: hidden;
+    margin: 20px 0;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    position: absolute; /* Permite que el contenedor ocupe el espacio completo */
+    top: 0; /* Asegúrate de que esté alineado en la parte superior */
+    left: 0; /* Asegúrate de que esté alineado a la izquierda */
 }
 
 .map-container img {
@@ -146,12 +151,7 @@ body {
         align-items: center; /* Centra los elementos en móviles */
     }
 
-    .container {
-        width: 90%; /* Hace que el contenedor ocupe el 90% del ancho */
-        height: auto; /* Ajusta la altura automáticamente */
-        max-height: 90vh; /* Limita la altura máxima */
-    }
-
+    
     .right-panel {
         width: 90%; /* Hace que el panel derecho ocupe el 90% en móviles */
         margin-top: 20px; /* Añade espacio entre el contenedor y el panel derecho */

@@ -1,6 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif; 
     background-image: url('Espacio.jpg');    background-size: cover;
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     display: flex;

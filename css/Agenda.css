@@ -144,6 +144,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     background-image: url('https://www.chromethemer.com/wallpapers/chromebook-wallpapers/images/960/iceland-chromebook-wallpaper.jpg');
+    background-attachment: fixed; 
     background-size: cover;
     justify-content: center;
     align-items: center;

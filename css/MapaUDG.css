@@ -14,16 +14,15 @@ body {
 
 .container {
     position: relative;
-    width: 360px; /* Tamaño aproximado de un celular moderno */
-    height: 640px; /* Ajustado para el tamaño del teléfono */
+    width: 380px; /* Aumentamos el ancho para parecerse más a un teléfono */
+    height: 760px; /* Aumentamos el alto para que todo el contenido quepa sin necesidad de scroll */
     background: #fff;
     border: 16px solid #333; /* Borde simulado para el teléfono */
     border-radius: 36px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    overflow-y: hidden; /* Quitamos el scroll dentro del contenedor */
     text-align: center;
-    top: 110px;
-
+    margin-top: 20px; /* Ajusta esto si es necesario */
 }
 
 .phone-screen {
@@ -149,5 +148,10 @@ body {
         width: 90%;
         height: auto;
         max-height: 90vh;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 80px; /* Ajusta esto según tus necesidades */
     }
 }

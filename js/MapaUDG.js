@@ -98,3 +98,74 @@ function showMainMap() {
     document.getElementById('doors-buttons').style.display = 'none';
 }
 
+// Obtener el elemento de imagen existente
+const mainMap = document.getElementById('main-map');
+
+// Arrays de imágenes para cada dirección
+const images = {
+    right: [
+        'images/derecha1.jpg',
+        'images/derecha2.jpg',
+        'images/derecha3.jpg',
+        'images/derecha4.jpg',
+        'images/derecha5.jpg',
+    ],
+    left: [
+        'images/izquierda1.jpg',
+        'images/izquierda2.jpg',
+        'images/izquierda3.jpg',
+        'images/izquierda4.jpg',
+        'images/izquierda5.jpg',
+    ],
+    up: [
+        'images/adelante1.jpg',
+        'images/adelante2.jpg',
+        'images/adelante3.jpg',
+    ],
+    down: [
+        'images/atras1.jpg',
+        'images/atras2.jpg',
+        'images/atras3.jpg',
+    ],
+};
+
+// Índice actual para cada dirección
+const currentIndices = {
+    right: 0,
+    left: 0,
+    up: 0,
+    down: 0,
+};
+
+// Función para reiniciar otros índices
+const resetOtherIndices = (selectedDirection) => {
+    for (const direction in currentIndices) {
+        if (direction !== selectedDirection) {
+            currentIndices[direction] = 0; // Reiniciar otros índices
+        }
+    }
+};
+
+// Función para cambiar la imagen
+const changeImage = (direction) => {
+    resetOtherIndices(direction); // Reiniciar otros índices
+    const imageArray = images[direction];
+    const currentIndex = currentIndices[direction];
+
+    // Cambiar la imagen
+    mainMap.src = imageArray[currentIndex];
+
+    // Incrementar el índice
+    currentIndices[direction]++;
+    
+    // Reiniciar el índice si se supera la longitud del array
+    if (currentIndices[direction] >= imageArray.length) {
+        currentIndices[direction] = 0; // Regresar al principio
+    }
+};
+
+// Añadir eventos a las flechas
+document.getElementById('right').addEventListener('click', () => changeImage('right'));
+document.getElementById('left').addEventListener('click', () => changeImage('left'));
+document.getElementById('up').addEventListener('click', () => changeImage('up'));
+document.getElementById('down').addEventListener('click', () => changeImage('down'));

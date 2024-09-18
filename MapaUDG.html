@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interactivo UDG</title>
     <link rel="stylesheet" href="css/MapaUDG.css">
-    <link rel="icon" type="image/svg+xml" href="images/logoUDG.jpg">
-
+    <link rel="icon" type="image/jpeg" href="images/logoUDG.jpg">
 </head>
 <body>
     <div class="important-things">
         <div class="add-form">
-    <button id="excel-button"onclick="window.location.href='Inicio.html';">Inicio</button>
-    <button id="excel-button"onclick="window.location.href='CosasImportantes.html';">Cosas Importantes</button>
-    <button id="excel-button"onclick="window.location.href='UDGMaterias.html';">UDG Materias</button>
-    <button id="excel-button"onclick="window.location.href='Agenda.html';">Agenda</button>
-    </div>
-    <div class="container">
-        <h1>Mapa Interactivo de la Universidad de Guadalajara</h1>
-        <div class="map-container" id="map-container">
-            <img src="images/mapa-udg.jpg" alt="Mapa de la UDG" id="main-map">
-            <iframe id="google-map" src="" style="display:none; width:100%; height:500px; border:none;"></iframe>
+            <button id="nav-button" onclick="window.location.href='Inicio.html';">Inicio</button>
+            <button id="nav-button" onclick="window.location.href='CosasImportantes.html';">Cosas Importantes</button>
+            <button id="nav-button" onclick="window.location.href='UDGMaterias.html';">UDG Materias</button>
+            <button id="nav-button" onclick="window.location.href='Agenda.html';">Agenda</button>
         </div>
-        <div class="buttons-container">
-            <button onclick="showMainMap()">⬛</button>
+    </div>
 
+    <div class="container">
+        <div class="phone-screen">
+            <div class="map-container" id="map-container">
+                <img src="images/mapa-udg.jpg" alt="Mapa de la UDG" id="main-map">
+                <iframe id="google-map" src="" style="display:none; width:100%; height:100%; border:none;"></iframe>
+            </div>
+            <button class="phone-home-button" onclick="showMainMap()"></button>
         </div>
     </div>
+
     <div class="right-panel">
         <h2>Filtro de Mapa UDG</h2>
         <div class="buttons-container">
@@ -43,7 +43,9 @@
         <div class="doors-buttons" id="doors-buttons" style="display: none;">
             <button onclick="changeMap('puerta1.jpg')">Puerta 1</button>
             <button onclick="changeMap('puerta2.jpg')">Puerta 2</button>
+        </div>
     </div>
+
     <script src="js/MapaUDG.js"></script>
 </body>
 </html>

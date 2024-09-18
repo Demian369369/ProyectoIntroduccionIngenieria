@@ -1,7 +1,28 @@
+const boulevardButton = document.getElementById('boulevard-button');
+const controlContainer = document.getElementById('control-container');
+const plusButton = controlContainer.querySelector('.plus');
+const buttonsContainer = controlContainer.querySelector('.buttons-container');
+
+const showControl = () => {
+    controlContainer.style.display = 'flex'; 
+};
+
+const toggleDirectionButtons = () => {
+    const directionButtons = document.querySelectorAll('.direction-button');
+    const buttonsVisible = Array.from(directionButtons).some(button => button.style.display === 'flex');
+    
+    directionButtons.forEach(button => {
+        button.style.display = buttonsVisible ? 'none' : 'flex';
+    });
+};
+
+boulevardButton.addEventListener('click', showControl);
+
+plusButton.addEventListener('click', toggleDirectionButtons);
+
 let showingParts = false;
 let showingInteractiveMap = false;
 let showingZonesOfInterest = false; 
-
 function showParts() {
     const partsButtons = document.getElementById('parts-buttons');
     const otherButtons = document.querySelectorAll('.buttons-container button:not(:first-child)');
@@ -15,9 +36,10 @@ function showParts() {
     }
     showingParts = !showingParts; 
 }
+
 function showZonesOfInterest() {
     const zonesButtons = document.getElementById('zones-buttons');
-    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(2))'); // Asumiendo que el nuevo botón es el quinto
+    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(2))'); 
 
     if (showingZonesOfInterest) {
         zonesButtons.style.display = 'none';
@@ -28,6 +50,7 @@ function showZonesOfInterest() {
     }
     showingZonesOfInterest = !showingZonesOfInterest; 
 }
+
 function showInteractiveMap() {
     const interactiveMapButtons = document.getElementById('interactive-map-buttons');
     const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(3))');
@@ -41,6 +64,7 @@ function showInteractiveMap() {
     }
     showingInteractiveMap = !showingInteractiveMap; 
 }
+
 
 function showDoors() {
     document.getElementById('doors-buttons').style.display = 'block';
@@ -73,6 +97,4 @@ function showMainMap() {
     document.getElementById('interactive-map-buttons').style.display = 'none';
     document.getElementById('doors-buttons').style.display = 'none';
 }
-
-
 

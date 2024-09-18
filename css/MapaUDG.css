@@ -10,6 +10,8 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
+    margin-top: -80px; 
+
 }
 .content-container {
     display: flex;
@@ -19,9 +21,9 @@ body {
 }
 .container {
     position: relative;
-    width: 380px; 
+    width: 480px; 
     height: 760px; 
-    background: #fff;
+    background-color: #ffffff;
     border: 16px solid #333; 
     border-radius: 36px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -51,12 +53,14 @@ body {
 .map-container {
     width: 100%;
     height: calc(100% - 50px); 
-    margin-top: 10px;
-    border: 1px solid #CCC;
-    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    border: none;
     overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
-
 .map-container img {
     width: 100%;
     height: 100%;
@@ -72,7 +76,7 @@ body {
     background-color: #333;
     border: none;
     border-radius: 50%;
-    color: #fff;
+    color: #0c0c0c;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -123,9 +127,10 @@ body {
 
 .important-things {
     position: fixed;
-    top: 20px;
+    top: 0px;
+    left: 0px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
@@ -150,7 +155,6 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        margin-top: 10px; 
         width: 90%; 
         max-height: 90vh; 
     }

@@ -45,11 +45,12 @@ body {
 
 .map-container {
     width: 100%;
-    height: calc(100% - 50px); 
+    height: calc(100% - 50px); /* Ajusta la altura del contenedor del mapa */
     margin-top: 10px;
     border: 1px solid #CCC;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .map-container img {

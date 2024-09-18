@@ -31,18 +31,27 @@
         <h2>Filtro de Mapa UDG</h2>
         <div class="buttons-container">
             <button onclick="showParts()">Buscar Zona en Especifico</button>
-            <button onclick="showDoors()">Mapa Interactivo</button>
+            <button onclick="showInteractiveMap()">Mapa Interactivo</button> <!-- Cambié a showInteractiveMap -->
             <button onclick="showGoogleMaps()">Abrir en Google Maps</button>
-            <button>Wikipedia de Lugares Cucei</button>
+            <button onclick="window.location.href='https://1drv.ms/p/c/8daf5964e63d40e0/Ef14SDxuiHhMithnYRkfLqEBrDBcbGrKqtKSGPDPGVXlzQ?e=g2w96K';">Conociendo Mi UDG</button>
         </div>
+        
+        <!-- Zona para Buscar Zona en Específico -->
         <div class="parts-buttons" id="parts-buttons" style="display: none;">
-            <button onclick="changeMap('biblioteca.jpg')">Biblioteca</button>
-            <button onclick="changeMap('cafeteria.jpg')">Cafetería</button>
-            <button onclick="changeMap('auditorio.jpg')">Auditorio</button>
+            <button class="btn-brillante" onclick="changeMap('entradas.jpg')">Entradas</button>
+            <button class="btn-brillante" onclick="changeMap('cordinacion.jpg')">Cordinacion</button>
+            <button class="btn-brillante" onclick="changeMap('edificiox.jpg')">Edificio (X)</button>
+            <button class="btn-brillante" onclick="changeMap('edificioalfabeta.jpg')">Edificios Alfa, Beta</button>
+            <button class="btn-brillante" onclick="changeMap('edificion.jpg')">Edificio (N)</button>
+            <button class="btn-brillante" onclick="changeMap('edificiout.jpg')">Edificios (U), (T)</button>
+            <button class="btn-brillante" onclick="changeMap('cafeteria.jpg')">Cafeterias</button>
         </div>
-        <div class="doors-buttons" id="doors-buttons" style="display: none;">
-            <button onclick="changeMap('puerta1.jpg')">Puerta 1</button>
-            <button onclick="changeMap('puerta2.jpg')">Puerta 2</button>
+
+        <!-- Zona para Mapa Interactivo -->
+        <div class="doors-buttons" id="interactive-map-buttons" style="display: none;">
+            <button class="btn-brillante" onclick="changeMap('puerta1.jpg')">Boulevard</button>
+            <button class="btn-brillante" onclick="changeMap('puerta2.jpg')">Proximamente</button>
+            <button class="btn-brillante" onclick="changeMap('puerta3.jpg')">Proximamente</button>
         </div>
     </div>
 

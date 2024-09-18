@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
 }
-
+#taskTime {
+    margin-top: 0px;
+}
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -61,11 +63,11 @@
 }
 
 .calendar-container {
-    width: 30%;
+    width: 35%;
 }
 
 .tasks-container {
-    width: 65%;
+    width: 60%;
 }
 
 #calendar {
@@ -91,12 +93,12 @@
 }
 
 .task-input {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #taskList {
     list-style-type: none;
-    padding: 0;
+    padding: 10;
 }
 
 #taskList li {

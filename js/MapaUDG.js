@@ -1,8 +1,32 @@
+let showingParts = false;
+let showingInteractiveMap = false;
+
 function showParts() {
-    document.getElementById('parts-buttons').style.display = 'block';
-    document.getElementById('doors-buttons').style.display = 'none';
-    document.getElementById('google-map').style.display = 'none';
-    document.getElementById('main-map').style.display = 'block';
+    const partsButtons = document.getElementById('parts-buttons');
+    const otherButtons = document.querySelectorAll('.buttons-container button:not(:first-child)');
+    
+    if (showingParts) {
+        partsButtons.style.display = 'none';
+        otherButtons.forEach(button => button.style.display = 'block');
+    } else {
+        partsButtons.style.display = 'block';
+        otherButtons.forEach(button => button.style.display = 'none');
+    }
+    showingParts = !showingParts; 
+}
+
+function showInteractiveMap() {
+    const interactiveMapButtons = document.getElementById('interactive-map-buttons');
+    const otherButtons = document.querySelectorAll('.buttons-container button:not(:nth-child(2))');
+    
+    if (showingInteractiveMap) {
+        interactiveMapButtons.style.display = 'none';
+        otherButtons.forEach(button => button.style.display = 'block');
+    } else {
+        interactiveMapButtons.style.display = 'block';
+        otherButtons.forEach(button => button.style.display = 'none');
+    }
+    showingInteractiveMap = !showingInteractiveMap; 
 }
 
 function showDoors() {
@@ -24,6 +48,7 @@ function showGoogleMaps() {
     iframe.style.display = 'block';
     document.getElementById('main-map').style.display = 'none';
     document.getElementById('parts-buttons').style.display = 'none';
+    document.getElementById('interactive-map-buttons').style.display = 'none';
     document.getElementById('doors-buttons').style.display = 'none';
 }
 
@@ -32,5 +57,8 @@ function showMainMap() {
     document.getElementById('main-map').style.display = 'block';
     document.getElementById('google-map').style.display = 'none';
     document.getElementById('parts-buttons').style.display = 'none';
+    document.getElementById('interactive-map-buttons').style.display = 'none';
     document.getElementById('doors-buttons').style.display = 'none';
 }
+
+

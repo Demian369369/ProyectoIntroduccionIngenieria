@@ -2,15 +2,15 @@ body {
     font-family: Arial, sans-serif;
     background-image: url('https://www.chromethemer.com/wallpapers/chromebook-wallpapers/images/960/iceland-chromebook-wallpaper.jpg');
     background-size: cover;
-    background-attachment: fixed; /* Para mantener la imagen de fondo fija */
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambiado a flex-start para evitar que se solapen en móviles */
+    align-items: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias líneas */
+    flex-wrap: wrap; 
 }
 
 .container {
@@ -45,14 +45,14 @@ body {
 
 .map-container {
     width: 100%; 
-    height: 100%; /* Cambiado para ocupar toda la altura disponible */
+    height: 100%; 
     overflow: hidden;
     margin: 20px 0;
     border: 1px solid #CCC;
     border-radius: 10px;
-    position: absolute; /* Permite que el contenedor ocupe el espacio completo */
-    top: 0; /* Asegúrate de que esté alineado en la parte superior */
-    left: 0; /* Asegúrate de que esté alineado a la izquierda */
+    position: absolute;
+    top: 0;
+    left: 0; 
 }
 
 .map-container img {
@@ -80,7 +80,7 @@ body {
 }
 
 .right-panel {
-    position: relative; /* Cambiado a relative para que se adapte mejor en móviles */
+    position: relative;
     top: 10px;
     width: 220px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -89,7 +89,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px;
     text-align: center;
-    margin-top: 10px; /* Añadido margen superior */
+    margin-top: 10px; 
 }
 
 .right-panel h2 {
@@ -99,7 +99,7 @@ body {
 }
 
 .right-panel button {
-    background-color: #007BFF;
+    background-color: #0caff4;
     color: #fff;
     border: none;
     padding: 10px;
@@ -120,7 +120,7 @@ body {
 }
 
 .important-things {
-    position: relative; /* Cambiado a relative para que se adapte mejor en móviles */
+    position: relative; 
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -147,18 +147,44 @@ body {
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column; /* Cambiado a columna en móviles */
-        align-items: center; /* Centra los elementos en móviles */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     
     .right-panel {
-        width: 90%; /* Hace que el panel derecho ocupe el 90% en móviles */
-        margin-top: 20px; /* Añade espacio entre el contenedor y el panel derecho */
+        width: 90%; 
+        margin-top: 20px; 
     }
 
     .important-things {
-        width: 90%; /* Hace que "important things" ocupe el 90% en móviles */
-        margin-top: 20px; /* Añade espacio entre el contenedor y "important things" */
+        width: 90%; 
+        margin-top: 20px; 
     }
+}
+
+.btn-brillante {
+    background-color: #ff4c4c; 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    border-radius: 8px; 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 20px rgba(255, 76, 76, 0.9); 
+}
+.btn-brillante:hover {
+    background-color: #e63939; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 76, 76, 0.7);
+}
+.btn-brillante:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 76, 76, 0.7); 
+}
+
+.btn-brillante:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 10px rgba(255, 76, 76, 0.5); 
 }

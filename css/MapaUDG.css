@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: url('https://www.chromethemer.com/wallpapers/chromebook-wallpapers/images/960/iceland-chromebook-wallpaper.jpg');
     background-size: cover;
-    background-attachment: fixed; 
+    background-attachment: fixed; /* Para mantener la imagen de fondo fija */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,26 +10,18 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
-    margin-top: -80px; 
+}
 
-}
-.content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 .container {
     position: relative;
-    width: 480px; 
-    height: 760px; 
-    background-color: #ffffff;
+    width: 360px; 
+    height: 640px;
+    background: #fff;
     border: 16px solid #333; 
     border-radius: 36px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: hidden; 
+    overflow: hidden;
     text-align: center;
-    margin-top: 40px; 
 }
 
 .phone-screen {
@@ -53,14 +45,12 @@ body {
 .map-container {
     width: 100%;
     height: calc(100% - 50px); 
-    margin: 0;
-    padding: 0;
-    border: none;
+    margin-top: 10px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
 }
+
 .map-container img {
     width: 100%;
     height: 100%;
@@ -70,13 +60,13 @@ body {
 .phone-home-button {
     position: absolute;
     bottom: 10px;
-    left: calc(50% - 15px);
+    left: calc(50% - 20px);
     width: 40px;
     height: 40px;
     background-color: #333;
     border: none;
     border-radius: 50%;
-    color: #0c0c0c;
+    color: #fff;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -127,12 +117,12 @@ body {
 
 .important-things {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 20px;
+    left: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -155,13 +145,8 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        width: 90%; 
-        max-height: 90vh; 
-    }
-}
-@media (min-width: 1024px) {
-    .container {
-        padding-top: 80px;
-        margin-top: 80px; 
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
     }
 }

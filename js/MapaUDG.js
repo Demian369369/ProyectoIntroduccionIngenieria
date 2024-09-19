@@ -98,10 +98,8 @@ function showMainMap() {
     document.getElementById('doors-buttons').style.display = 'none';
 }
 
-// Obtener el elemento de imagen existente
 const mainMap = document.getElementById('main-map');
 
-// Arrays de imágenes para cada dirección
 const images = {
     right: [
         'images/derecha1.jpg',
@@ -109,13 +107,18 @@ const images = {
         'images/derecha3.jpg',
         'images/derecha4.jpg',
         'images/derecha5.jpg',
+        'images/derecha6.jpg',
+        'images/derecha7.jpg',
+        'images/derecha8.jpg',
+        'images/derecha9.jpg',
+        'images/derecha10.jpg',
+        'images/derecha11.jpg',
+        'images/derecha12.jpg',
     ],
     left: [
         'images/izquierda1.jpg',
         'images/izquierda2.jpg',
-        'images/izquierda3.jpg',
-        'images/izquierda4.jpg',
-        'images/izquierda5.jpg',
+     
     ],
     up: [
         'images/adelante1.jpg',
@@ -129,7 +132,6 @@ const images = {
     ],
 };
 
-// Índice actual para cada dirección
 const currentIndices = {
     right: 0,
     left: 0,
@@ -137,35 +139,62 @@ const currentIndices = {
     down: 0,
 };
 
-// Función para reiniciar otros índices
-const resetOtherIndices = (selectedDirection) => {
-    for (const direction in currentIndices) {
-        if (direction !== selectedDirection) {
-            currentIndices[direction] = 0; // Reiniciar otros índices
+let horizontalOffset = 0;
+
+const changeImage = (direction) => {
+    if (direction === 'right') {
+        if (currentIndices.left > 0) {
+            currentIndices.left--; 
+            mainMap.src = images.left[currentIndices.left]; 
+        } else {
+            mainMap.src = images.right[horizontalOffset]; 
+            horizontalOffset++; 
+            if (horizontalOffset >= images.right.length) {
+                horizontalOffset = 0; 
+            }
+        }
+    } else if (direction === 'left') {
+        if (horizontalOffset > 0) {
+            horizontalOffset--; 
+            mainMap.src = images.right[horizontalOffset]; 
+        } else {
+            mainMap.src = images.left[currentIndices.left]; 
+            currentIndices.left++; 
+            if (currentIndices.left >= images.left.length) {
+                currentIndices.left = 0; 
+                
+                
+            }
+        }
+    }else if (direction === 'up') {
+        if (currentIndices.down > 0) {
+            currentIndices.down--; 
+            mainMap.src = images.down[currentIndices.down];
+        } else {
+            mainMap.src = images.up[verticalOffset];
+            verticalOffset++;
+            if (verticalOffset >= images.up.length) {
+                verticalOffset = 0; 
+            }
+        }
+    } else if (direction === 'down') {
+        if (verticalOffset > 0) {
+            verticalOffset--; 
+            mainMap.src = images.up[verticalOffset];
+        } else {
+            mainMap.src = images.down[currentIndices.down];
+            currentIndices.down++;
+            if (currentIndices.down >= images.down.length) {
+                currentIndices.down = 0; 
+            }
         }
     }
 };
 
-// Función para cambiar la imagen
-const changeImage = (direction) => {
-    resetOtherIndices(direction); // Reiniciar otros índices
-    const imageArray = images[direction];
-    const currentIndex = currentIndices[direction];
 
-    // Cambiar la imagen
-    mainMap.src = imageArray[currentIndex];
 
-    // Incrementar el índice
-    currentIndices[direction]++;
-    
-    // Reiniciar el índice si se supera la longitud del array
-    if (currentIndices[direction] >= imageArray.length) {
-        currentIndices[direction] = 0; // Regresar al principio
-    }
-};
-
-// Añadir eventos a las flechas
 document.getElementById('right').addEventListener('click', () => changeImage('right'));
 document.getElementById('left').addEventListener('click', () => changeImage('left'));
+
 document.getElementById('up').addEventListener('click', () => changeImage('up'));
 document.getElementById('down').addEventListener('click', () => changeImage('down'));

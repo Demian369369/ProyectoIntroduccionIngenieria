@@ -159,3 +159,15 @@ header .input-section {
         min-width: 96%;
     }
 }
+
+.footer {
+    background-color: rgba(128, 128, 128, 0.9); 
+    color: #00f7ff; 
+    text-align: center; 
+    padding: 10px 0;
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    font-size: 14px; 
+}
